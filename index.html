@@ -6,6 +6,9 @@
     <script src="assert/js/Chart.min.js"></script>
     <script src="assert/js/semantic.min.js"></script>
     <script src="assert/js/jquery.dynatable.js"></script>
+    <style>
+        th a {color: black}
+    </style>
 </head>
 <body class="pushable">
 <div class="pusher">
@@ -14,18 +17,20 @@
             <h1 class="ui inverted header">CTFTime Infomation Chart</h1>
         </div>
     </div>
-    <div class="ui vertical stripe segment">
+    <div class="ui container">
+        <div class="ui vertical stripe segment">
 
-        <table id="my-final-table" class="ui">
-            <thead>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>URL</th>
-                <th>TAGS</th>
-                <th>Points</th>
-            </thead>
-            <tbody></tbody>
-        </table>
+            <table id="my-final-table" class="ui table table-bordered">
+                <thead>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>points</th>
+                    <th>tags</th>
+                    <th>url</th>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
     </div>
 </div>
 
@@ -38,6 +43,9 @@
         $('#my-final-table').dynatable({
             dataset: {
                 records: result
+            },
+            features: {
+                paginate: false
             }
         });
     });
