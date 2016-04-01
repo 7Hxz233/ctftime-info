@@ -35,10 +35,9 @@
 <script type="application/javascript">
 
     $.get("db.json", function(result){
-        var myRecords = JSON.parse(result);
         $('#my-final-table').dynatable({
             dataset: {
-                records: myRecords
+                records: result
             }
         });
     });
