@@ -1,0 +1,25 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    little-plugger (1.1.4)
+    logging (2.1.0)
+      little-plugger (~> 1.1)
+      multi_json (~> 1.10)
+    mini_portile2 (2.0.0)
+    multi_json (1.11.2)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
+    sequel (4.32.0)
+    thread (0.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  logging
+  nokogiri
+  sequel
+  thread
+
+BUNDLED WITH
+   1.11.2
