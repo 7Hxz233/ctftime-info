@@ -1,1 +1,47 @@
-it works
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="assert/css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="assert/css/jquery.dynatable.css">
+    <script src="assert/js/jquery.min.js"></script>
+    <script src="assert/js/Chart.min.js"></script>
+    <script src="assert/js/semantic.min.js"></script>
+    <script src="assert/js/jquery.dynatable.js"></script>
+</head>
+<body class="pushable">
+<div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment">
+        <div class="ui text container">
+            <h1 class="ui inverted header">CTFTime Infomation Chart</h1>
+        </div>
+    </div>
+    <div class="ui vertical stripe segment">
+
+        <table id="my-final-table" class="ui">
+            <thead>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>URL</th>
+                <th>TAGS</th>
+                <th>Points</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+
+
+</body>
+<script type="application/javascript">
+
+    $.get("db.json", function(result){
+        var myRecords = JSON.parse(result);
+        $('#my-final-table').dynatable({
+            dataset: {
+                records: myRecords
+            }
+        });
+    });
+
+</script>
+</html>
